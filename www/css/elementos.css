@@ -1,0 +1,78 @@
+/*mis definiciones de estilo*/
+.listas{
+	font-size: 30px;
+}
+.imagenPerfil{
+	margin-top:10px;
+	margin-left: 10px;
+
+}
+.imagenLista{
+	margin-top:10px;
+	margin-left: 10px;
+
+}
+.profesionLista{
+	font-size:12px;
+	margin-top:2px;
+	margin-left: 10px;
+
+}
+.ciudad{
+	font-size:12px;
+	margin-top:2px;
+	margin-left: 10px;
+
+}
+.edad{
+	font-size:12px;
+	margin-top:2px;
+	margin-left: 10px;
+
+}
+.usotics{
+	font-size:14px;
+	margin-top:2px;
+	margin-left:1px;
+
+}
+.imagenGmail{
+	margin-top:10px;
+	margin-left: 10px;
+}
+.drivegmail{
+	font-size:12px;
+	margin-top:2px;
+	margin-left: 10px;
+
+}
+.email{
+	font-size:12px;
+	margin-top:2px;
+	margin-left: 10px;
+
+}
+.imagenTelf{
+	margin-top:10px;
+	margin-left: 10px;
+
+}
+
+.telf{
+	font-size:12px;
+	margin-top:2px;
+	margin-left: 10px;
+
+}
+
+.formularios{
+	margin-left:5px;
+	margin-right:5px;
+
+}
+.index{
+	font-size: 30px;
+	margin-left:5px; 
+	margin-right:5px;
+
+}
