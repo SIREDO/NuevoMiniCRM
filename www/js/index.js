@@ -17,27 +17,65 @@
  * under the License.
  */
  var confDB ={
-     //variable existe db
+     //variable existe db y db
     existe_db:"",
+    db:"",
+
+    //función que comprueba si existe la base de datos
     initialize: function(){
+
        this.existe_db=window.localStorage.getItem("existe_db");
 
+       //creamos un enlace con la base de datos
+       this.db=window.openDatabase("localDB", "1.0", "Datos de prueba", 2*(1024*1024);
         if(this.existe_db==null){
-           console.log('he entrado');
-            navigator.notification.confirm(
-            'La base de datos no existe', //message
-            this.onConfirm, //callback to invoke with index of button pressed
-            'Base de datos', //title
-            ['Crear','Salir'] //buttonLabels
-            );
+           console.log('No existe Base de datos');
+            this.createDB();
         }
     },
-    onConfirm:function (buttonIndex){
+
+    //función que crea la base de datos
+    createDB: function() {
+       console.log("Creamos la base de datos");
+       //creamos tres callbacks  
+        this.db.transaction(this.createLocalDB,this.createDBError,this.createDBSucc);
+    },
+
+    createLocalDB: function(tx) {
+        //creamos una tabla en la base de datos
+       var sql="CREATE TABLE IF NOT EXISTS localDB ("+
+                "id INTEGER PRIMARY KEY AUTOINCREMENT,"+
+                "nombre VARCHAR(50),"+
+                "apellidos VARCHAR(256),"+
+                "cargo VARCHAR(128),"+
+                "email VARCHAR(64))"
+            ;
+        tx.executeSql(sql);
+
+        //insertamos valores de ejemplo en la tabla anterior
+        sql="INSERT INTO localDB(id,nombre,apellidos,cargo,email)"+
+            "VALUES(1,'Andrea','Lurbe','Profesora','alurb@gmail.com')";
+        tx.executeSql(sql);
+        sql="INSERT INTO localDB(id,nombre,apellidos,cargo,email)"+
+            "VALUES(1,'Pedro','Navarro','Profesor','penarrob@gmail.com')";
+        tx.executeSql(sql);
+    },
+
+    createDBError: function(err) {
+        console.log("Se ha producido un error al crear la base de datos: "+error.code);
+    },
+
+    createDBSucc: function() {
+        console.log("Se ha generado la base de datos con éxito");
+        window.localStorage.setItem("existe_db",1);
+    },
+
+    /*onConfirm:function (buttonIndex){
         if(buttonIndex==1){
             console.log('He pulsado el boton crear');
             window.localStorage.setItem("existe_db",1);
         }
-    }
+    }*/
 };
 var app = {
     // Application Constructor

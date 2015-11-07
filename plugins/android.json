@@ -1,12 +1,6 @@
 {
     "prepare_queue": {
-        "installed": [
-            {
-                "plugin": "org.apache.cordova.camera",
-                "vars": {},
-                "topLevel": true
-            }
-        ],
+        "installed": [],
         "uninstalled": []
     },
     "config_munge": {
@@ -25,6 +19,20 @@
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -39,6 +47,9 @@
             "PACKAGE_NAME": "com.dam.pruebas"
         },
         "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.dam.pruebas"
+        },
+        "org.apache.cordova.camera": {
             "PACKAGE_NAME": "com.dam.pruebas"
         }
     },
