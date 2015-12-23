@@ -42,6 +42,7 @@ var cargarDB = {
 
         //Ceamos variable para almacenar todos los datos de una consulta
        // var sql="SELECT * FROM localDB;";
+       //PASO 4
         var sql="SELECT * FROM localDB ORDER BY ultimos DESC;";
         console.log("Lanzamos la consulta");
 
@@ -61,12 +62,14 @@ var cargarDB = {
 
 
 
-                        $("#usuarioList ul").append("<li><a href='#'><img src='./img/usu1.PNG' class='imagenLista'><div "+"class='nombreLista'>"+fila.nombre+"</div><div class='profesionLista'>"+fila.cargo+"</div></a></li>").listview('refresh');
+                        //$("#usuarioList ul").append("<li><a href='#'><img src='./img/usu1.PNG' class='imagenLista'><div "+"class='nombreLista'>"+fila.nombre+"</div><div class='profesionLista'>"+fila.cargo+"</div></a></li>").listview('refresh');
                    // <li><a href="#"><img src="./img/usu1.PNG" class="imagenLista"><div class="nombreLista">Pilar Palanca</div><div class="profesionLista">Profesora</div></a></li>
                            // $("#usuarioList ul").append("<li><a href='#'><img src='./img/usu3.PNG' class='imagenLista'><div class='nombreLista'>"+fila.nombre+"</div><div class='profesionLista'>Profesor</div></a></li>").listview('refresh');
                         //$("#usuarioList ul").append("<li>prueba</li>").listview('refresh');
                         //$("#usuarioList ul").append("<li><a href='#'>"+fila.nombre+"</a></li>").listview('refresh');
                         
+                        //PASO 4
+                        $("#usuarioList ul").append("<li><a dataid="+fila.id+" href='detalles.html'><img src='./img/perfil.PNG' class='imagenLista'><div "+"class='nombreLista'>"+fila.nombre+"</div><div class='profesionLista'>"+fila.cargo+"</div><div class='ultimos'>"+fila.ultimos+"</div></a></li>").listview('refresh');
                         
 
                         console.log("nombreañadido");
