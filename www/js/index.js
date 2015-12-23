@@ -134,13 +134,33 @@ var confDB = {
         console.log("Creando inserts");
         //insertamos valores de ejemplo en la tabla anterior
 
-      sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto)"+
-      "VALUES('Andrea','Lurbe','Castellano','Profesora','alurb@gmail.com','658970440','Valencia','36','lurbe.jpg');";
-      tx.executeSql(sql);
-     sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto)"+
-        "VALUES('Silvia','Reolid','Castellano','Profesora','silredo@gmail.com','605916858','Valencia','34','reolid.jpg');";
+      //sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto)"+
+     // "VALUES('Andrea','Lurbe','Castellano','Profesora','alurb@gmail.com','658970440','Valencia','36','lurbe.jpg');";
+     // tx.executeSql(sql);
+     //sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto)"+
+        //"VALUES('Silvia','Reolid','Castellano','Profesora','silredo@gmail.com','605916858','Valencia','34','reolid.jpg');";
+        //tx.executeSql(sql);
+
+        //Paso 3
+        sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto,ultimos)"+
+         "VALUES('Andrea','Lurbe','Castellano','Profesora','alurb@gmail.com','658970440','Valencia','36','lurbe.jpg',0);";
         tx.executeSql(sql);
-        
+        sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto,ultimos)"+
+        "VALUES('Silvia','Reolid','Castellano','Profesora','silredo@gmail.com','605916858','Valencia','34','reolid.jpg',0);";
+        tx.executeSql(sql);
+        sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto,ultimos)"+
+        "VALUES('Juana','Romero','Matemáticas','Profesora','jromero@gmail.com','647837867','Valencia','35','romero.jpg',0);";
+        tx.executeSql(sql);
+        sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto,ultimos)"+
+        "VALUES('Salva','Rodríguez','Filosofía','Profesor','rodriguez@gmail.com','605916898','Valencia','40','rodriguez.jpg',1);";
+        tx.executeSql(sql);
+        sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto,ultimos)"+
+        "VALUES('Sergio','Ruíz','Filosofía','Profesor','ruiz@gmail.com','695916898','Valencia','40','ruiz.jpg',1);";
+        tx.executeSql(sql);
+        sql="INSERT INTO localDB(nombre,apellidos,departamento,cargo,email,telefono,ciudad,edad,foto,ultimos)"+
+        "VALUES('Sento','Ramos','Filosofía','Profesor','ramos@gmail.com','667816898','Valencia','40','ramos.jpg',1);";
+        tx.executeSql(sql);
+
 
 
         sql2="INSERT INTO talleres(titulo,departamento,profesor,horas, descripcion, presencial, ingles)"+
