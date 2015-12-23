@@ -121,8 +121,10 @@ var confDB = {
     createLocalDB:function(tx){
         console.log("Creamos primera tabla");
 
-        var sql="CREATE TABLE IF NOT EXISTS localDB (id INTEGER PRIMARY KEY AUTOINCREMENT,nombre VARCHAR(50),apellidos VARCHAR(50),departamento VARCHAR(50),cargo VARCHAR(50),email VARCHAR(64),telefono VARCHAR(9),ciudad VARCHAR(15),edad VARCHAR(2),foto VARCHAR(50));";
-       
+        //var sql="CREATE TABLE IF NOT EXISTS localDB (id INTEGER PRIMARY KEY AUTOINCREMENT,nombre VARCHAR(50),apellidos VARCHAR(50),departamento VARCHAR(50),cargo VARCHAR(50),email VARCHAR(64),telefono VARCHAR(9),ciudad VARCHAR(15),edad VARCHAR(2),foto VARCHAR(50));";
+       //PASO2
+       var sql="CREATE TABLE IF NOT EXISTS localDB (id INTEGER PRIMARY KEY AUTOINCREMENT,nombre VARCHAR(50),apellidos VARCHAR(50),departamento VARCHAR(50),cargo VARCHAR(50),email VARCHAR(64),telefono VARCHAR(9),ciudad VARCHAR(15),edad VARCHAR(2),foto VARCHAR(50), ultimos INTEGER (1));";
+        
         tx.executeSql(sql);
 
         var sql2="CREATE TABLE IF NOT EXISTS talleres (id INTEGER PRIMARY KEY AUTOINCREMENT,titulo VARCHAR(100),departamento VARCHAR(100),profesor VARCHAR(128),horas VARCHAR(3), descripcion VARCHAR (300), presencial VARCHAR (2), ingles VARCHAR (2));";
