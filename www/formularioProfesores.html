@@ -27,61 +27,75 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
          <!--Hoja de Estilos/themes nuevo-->
-          <!--Hoja de Estilos/themes nuevo-->
+         
         <link rel="stylesheet" href="./jquery/mor.min.css" />
         <link rel="stylesheet" href="./jquery/jquery.mobile.icons.min.css" />
 
         <!--Hoja de Estilos/CSS JQuery mobile -->
         <link rel="stylesheet" href="./jquery/jquery.mobile.structure-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/elementos.css" />
 
-        <title>Elementos de JQuery</title>
-         
+        <title>Aplicación SGE</title>
+       <style>
+        .ui-block-a, .ui-block-b {
+    
+    
+            height: 140px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+        </style>
     </head>
     <body>
         <!-- HOME -->
         <div data-role="page" id="home">
             <div data-role="header">
-               </br><h1>DETALLES</h1></br>
-            
+                </br><h1>NUEVO PROFESOR</h1></br>
+            </div>
 
-            <div data-role="main" class="ui-content" id="usuarioDet">
+            <div class="ui-grid-b ui-responsive">
+                <li>
+                    <div class="ui-block-a">
+                        <span><a href="#"><img src="./img/perfil.PNG" class="imagenPerfil"></a></span>
+                    </div><br>
+                    <div class="ui-block-b">
+                        <span><a href="#" class="ui-btn ui-corner-all ui-icon-camera ui-btn-icon-notext">Camera Icon</a></span>
+                    </div>
+                </li>
+      
+            </div><br>
                 
-                <ul data-role="listview">
-                    <li>
-                        <a href="#"><img src="./img/usu1.PNG" class="imagenLista"><div class="nombreLista">Pilar</div><div class="apellidoLista">Palanca</div><div class="profesionLista">Profesora</div><div class="ciudad">Valencia</div><div class="edad">43 años</div></a>
-                    </li>
-                    <li>
-                        <a href="#"><div class="departamento">Departamento</div><div class="dep">Filosofía</div></a>
-                    </li>
-                    <li>
-                        <a href="#"><div class="correo">Correo</div>
-                            <input type="button" data-icon="mail" value="ppalanca@gmail.com"></a>
-                        
-                    </li>
-                    <li>
-                        <a href="#"><div class="telefono">Teléfono</div>
-                            <input type="button" data-icon="phone" value="656747734"></a>
-                    </li>
-                    <li>
-                        <label for="taller">Talleres que imparte</label>
-                    <select id="taller" name="taller">
-                      <option value="" selected="selected">-Talleres-</option>
-                      <option value="kant">Introducción a Kant</option>
-                      <option value="platon">El mundo de las ideas</option>
-                      <option value="aristoteles">Lógica aristotélica</option>
-                      <option value="descartes">La primera verdad: Pienso, existo</option>
-                    </select><br>
-                    <button type="button" class="btn btn-default btn-sm">
-                        <span class="glyphicon glyphicon-play-circle"></span> Ver detalles
-                    </button>
-                    </li>
-                  
-                </ul></br>
-            </div></br></br></br></br></br>
+
+                
+            <div class="ui-field-contain formularios">
+                                         
+                
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre"><br>
+                <label for="apellido">Apellidos</label>
+                <input type="text" name="apellido" id="apellido"><br>
+                <label for="departamento">Departamento</label>
+                <input type="text" name="departamento" id="departamento"><br>
+                <label for="cargo">Cargo</label>
+                <input type="text" name="cargo" id="cargo"><br>
+                <label for="email">Correo</label>
+                <input type="text" name="email" id="email"><br>
+                <label for="telefono">Teléfono</label>
+                <input type="text" name="telefono" id="telefono"><br>
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad"><br>
+                <label for="edad">Edad</label>
+                <input type="text" name="edad" id="edad"><br>
+                <button class="ui-btn" id="guardarp">GUARDAR</button>
+            </div>
+            
+            
+            
+        
+
         </div>
-        </div>
+        
 
         <script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>

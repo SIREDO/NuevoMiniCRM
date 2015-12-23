@@ -53,20 +53,6 @@
             <div data-role="header">
                 </br><h1>NUEVO TALLER</h1></br>
             </div>
-
-            <div class="ui-grid-b ui-responsive">
-                <li>
-                    <div class="ui-block-a">
-                        <span><a href="#"><img src="./img/perfil.PNG" class="imagenPerfil"></a></span>
-                    </div><br>
-                    <div class="ui-block-b">
-                        <span><a href="#" class="ui-btn ui-corner-all ui-icon-camera ui-btn-icon-notext">Camera Icon</a></span>
-                    </div>
-                </li>
-      
-            </div><br>
-                
-
                 
             <div class="ui-field-contain formularios">
                                          
@@ -76,12 +62,19 @@
                 <label for="departamento">Departamento</label>
                 <input type="text" name="departamento" id="departamento"><br>
                 <label for="nombre">Profesor/a que lo imparte</label>
-                <input type="text" name="nombre" id="nombre"><br>
+                    <select id="nombre" name="nombre">
+                      <option value="" selected="selected"> </option>
+                      <option value="silvia">Silvia</option>
+                      <option value="andrea">Andrea</option>
+                      <option value="pilar">Pilar</option>
+                      <option value="marta">Marta</option>
+                    </select><br>
                 <label for="horas">Horas/Créditos</label>
                 <input type="text" name="horas" id="horas"><br>
                 <label for="descripcion">Breve descripción</label>
                 <input type="text" name="descripcion" id="descripcion"><br>
             </div>
+
             <div class="ui-field-contain formularios">
             <fieldset data-role="controlgroup">
                   <label for="presencial">Presencial</label>
@@ -90,6 +83,7 @@
                   <input type="checkbox" name="caractaller" id="ingles" value="ingles">
             </fieldset>
             </div>
+            
             <div class="ui-field-contain formularios">
             <fieldset data-role="controlgroup">
                 <input type="submit" value="Guardar">  

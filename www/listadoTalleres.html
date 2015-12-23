@@ -26,62 +26,46 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-         <!--Hoja de Estilos/themes nuevo-->
+           <!--Hoja de Estilos/themes nuevo-->
         <link rel="stylesheet" href="./jquery/mor.min.css" />
         <link rel="stylesheet" href="./jquery/jquery.mobile.icons.min.css" />
 
         <!--Hoja de Estilos/CSS JQuery mobile -->
         <link rel="stylesheet" href="./jquery/jquery.mobile.structure-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/elementos.css" />
 
-        <title>Aplicación SGE</title>
-        <style>
-        {
-    
-    
-            //font-size: 30px;
-        }
-        </style>
+        <title>Elementos de JQuery</title>
     </head>
     <body>
         <!-- HOME -->
         <div data-role="page" id="home">
             <div data-role="header">
-                </br><h1>MENÚ DE ELEMENTOS</h1></br>
+                </br><h1>LISTADO TALLERES</h1></br>
             </div>
-            <div data-role="main" class="ui-content">
+            <div data-role="main" class="ui-content" id="talleresList">
                 
-                <a href="listas.html" data-ajax="false">Lista Profesores</a></br>
-            </div>
-            <div data-role="main" class="ui-content">
-                
-                <a href="listadoTalleres.html" data-ajax="false">Lista Talleres</a></br>
-            </div>
-            <div data-role="main" class="ui-content">
-                
-                <a href="detalles.html" data-ajax="false">Detalles Profesor</a></br>
-            </div>
-            <div data-role="main" class="ui-content">
-                
-                <a href="detallesTalleres.html" data-ajax="false">Detalles Talleres</a></br>
-            </div>
-            <div data-role="main" class="ui-content">
-                
-                <a href="formularios.html" data-ajax="false">Formulario Nuevo Taller</a></br>
-            </div>
-            <div data-role="main" class="ui-content">
-                
-                <a href="formularioProfesores.html" data-ajax="false">Formulario Nuevo Profesor</a></br>
-            </div>
-        </div>
-        
+                <ul data-role="listview">
 
-        <script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-           // app.initialize();
-        </script>
-    </body>
-</html>
+                      
+                          <li>PRUEBA 1</li>
+                          <li>PRUEBA 2</li>
+                          <li>PRUEBA 3</li>
+                         
+                    <!--<li><a href="#"><img src="./img/usu1.PNG" class="imagenLista"><div class="nombreLista">Pilar Palanca</div><div class="profesionLista">Profesora</div></a></li>
+                      <li><a href="#"><img src="./img/usu2.PNG" class="imagenLista"><div class="nombreLista">Marta Haro</div><div class="profesionLista">Profesora</div></a></li>
+                      <li><a href="#"><img src="./img/usu3.PNG" class="imagenLista"><div class="nombreLista">Juan Sánchez</div><div class="profesionLista">Profesor</div></a></li>-->
+                    </ul><br>
+                </div>
+            </div>
+
+
+            <script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
+            <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="js/index.js"></script>
+            <script type="text/javascript">
+               // app.initialize();
+            </script>
+        </body>
+    </html>
